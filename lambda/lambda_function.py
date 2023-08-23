@@ -1,4 +1,5 @@
 import logging
+import os
 import ask_sdk_core.utils as ask_utils
 import openai
 from ask_sdk_core.skill_builder import SkillBuilder
@@ -8,7 +9,7 @@ from ask_sdk_core.handler_input import HandlerInput
 from ask_sdk_model import Response
 
 # Set your OpenAI API key
-openai.api_key = "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"
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
